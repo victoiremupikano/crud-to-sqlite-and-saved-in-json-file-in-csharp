@@ -207,7 +207,6 @@ namespace sqliteDbToJsonFile.Views
             //creation de la db sqlite
             Apps.integratedDB sqliteq = new Apps.integratedDB();
             sqliteq.create_db();
-            //loard();
         }
 
         private void btnNew_Click(object sender, EventArgs e)

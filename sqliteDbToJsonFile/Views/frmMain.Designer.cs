@@ -75,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNom.Location = new System.Drawing.Point(120, 59);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(298, 20);
+            this.txtNom.Size = new System.Drawing.Size(224, 20);
             this.txtNom.TabIndex = 7;
             // 
             // lblNom
@@ -102,7 +102,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPostNom.Location = new System.Drawing.Point(120, 85);
             this.txtPostNom.Name = "txtPostNom";
-            this.txtPostNom.Size = new System.Drawing.Size(298, 20);
+            this.txtPostNom.Size = new System.Drawing.Size(224, 20);
             this.txtPostNom.TabIndex = 8;
             // 
             // lblLieuNaiss
@@ -120,7 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLieuNais.Location = new System.Drawing.Point(120, 137);
             this.txtLieuNais.Name = "txtLieuNais";
-            this.txtLieuNais.Size = new System.Drawing.Size(298, 20);
+            this.txtLieuNais.Size = new System.Drawing.Size(224, 20);
             this.txtLieuNais.TabIndex = 10;
             // 
             // lblDteNaiss
@@ -136,7 +136,7 @@
             // 
             this.lblOrigine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOrigine.AutoSize = true;
-            this.lblOrigine.Location = new System.Drawing.Point(424, 115);
+            this.lblOrigine.Location = new System.Drawing.Point(350, 115);
             this.lblOrigine.Name = "lblOrigine";
             this.lblOrigine.Size = new System.Drawing.Size(46, 13);
             this.lblOrigine.TabIndex = 15;
@@ -145,7 +145,7 @@
             // txtOrigine
             // 
             this.txtOrigine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOrigine.Location = new System.Drawing.Point(527, 112);
+            this.txtOrigine.Location = new System.Drawing.Point(453, 112);
             this.txtOrigine.Name = "txtOrigine";
             this.txtOrigine.Size = new System.Drawing.Size(352, 20);
             this.txtOrigine.TabIndex = 14;
@@ -154,7 +154,7 @@
             // 
             this.lblNumCarte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumCarte.AutoSize = true;
-            this.lblNumCarte.Location = new System.Drawing.Point(424, 89);
+            this.lblNumCarte.Location = new System.Drawing.Point(350, 89);
             this.lblNumCarte.Name = "lblNumCarte";
             this.lblNumCarte.Size = new System.Drawing.Size(97, 13);
             this.lblNumCarte.TabIndex = 13;
@@ -163,7 +163,7 @@
             // txtNumCarte
             // 
             this.txtNumCarte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumCarte.Location = new System.Drawing.Point(527, 86);
+            this.txtNumCarte.Location = new System.Drawing.Point(453, 86);
             this.txtNumCarte.Name = "txtNumCarte";
             this.txtNumCarte.Size = new System.Drawing.Size(352, 20);
             this.txtNumCarte.TabIndex = 13;
@@ -172,7 +172,7 @@
             // 
             this.lblAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdresse.AutoSize = true;
-            this.lblAdresse.Location = new System.Drawing.Point(424, 63);
+            this.lblAdresse.Location = new System.Drawing.Point(350, 63);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(51, 13);
             this.lblAdresse.TabIndex = 11;
@@ -181,7 +181,7 @@
             // txtAdresse
             // 
             this.txtAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdresse.Location = new System.Drawing.Point(527, 60);
+            this.txtAdresse.Location = new System.Drawing.Point(453, 60);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(352, 20);
             this.txtAdresse.TabIndex = 12;
@@ -190,7 +190,7 @@
             // 
             this.lblGenre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(424, 37);
+            this.lblGenre.Location = new System.Drawing.Point(350, 37);
             this.lblGenre.Name = "lblGenre";
             this.lblGenre.Size = new System.Drawing.Size(42, 13);
             this.lblGenre.TabIndex = 9;
@@ -202,7 +202,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dteNaiss.Location = new System.Drawing.Point(120, 112);
             this.dteNaiss.Name = "dteNaiss";
-            this.dteNaiss.Size = new System.Drawing.Size(298, 20);
+            this.dteNaiss.Size = new System.Drawing.Size(224, 20);
             this.dteNaiss.TabIndex = 9;
             // 
             // cboGenre
@@ -214,7 +214,7 @@
             "Masculin",
             "Féminin",
             "Autres"});
-            this.cboGenre.Location = new System.Drawing.Point(527, 32);
+            this.cboGenre.Location = new System.Drawing.Point(453, 32);
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(352, 21);
             this.cboGenre.TabIndex = 11;
@@ -242,7 +242,7 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(864, 157);
+            this.dgvData.Size = new System.Drawing.Size(790, 157);
             this.dgvData.TabIndex = 18;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.SelectionChanged += new System.EventHandler(this.dgvData_SelectionChanged);
@@ -307,7 +307,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(891, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(817, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStripMain";
             // 
@@ -398,7 +398,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.Location = new System.Drawing.Point(120, 33);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(298, 20);
+            this.txtId.Size = new System.Drawing.Size(224, 20);
             this.txtId.TabIndex = 6;
             // 
             // btnLoardOnTheJson
@@ -406,7 +406,7 @@
             this.btnLoardOnTheJson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoardOnTheJson.Location = new System.Drawing.Point(595, 350);
             this.btnLoardOnTheJson.Name = "btnLoardOnTheJson";
-            this.btnLoardOnTheJson.Size = new System.Drawing.Size(169, 23);
+            this.btnLoardOnTheJson.Size = new System.Drawing.Size(210, 23);
             this.btnLoardOnTheJson.TabIndex = 28;
             this.btnLoardOnTheJson.Text = "Lire dans le fichier JSON";
             this.btnLoardOnTheJson.UseVisualStyleBackColor = true;
@@ -416,7 +416,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 401);
+            this.ClientSize = new System.Drawing.Size(817, 401);
             this.Controls.Add(this.btnLoardOnTheJson);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtId);
