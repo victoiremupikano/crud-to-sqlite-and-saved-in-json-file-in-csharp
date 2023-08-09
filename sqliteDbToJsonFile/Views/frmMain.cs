@@ -224,5 +224,11 @@ namespace sqliteDbToJsonFile.Views
         {
             loard();
         }
+
+        private void baseDeDonnéeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSettingsDb frm = new frmSettingsDb();
+            frm.ShowDialog();
+        }
     }
 }

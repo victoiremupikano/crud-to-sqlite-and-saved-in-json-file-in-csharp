@@ -19,11 +19,11 @@ namespace sqliteDbToJsonFile.Apps
             { "id", "id" },
             { "nom", "nom" },
             { "postnom", "postnom" },
-            { "dteNais", "dteNais" },
-            { "lieuNais", "lieuNais" },
+            { "dteNais", "datenais" },
+            { "lieuNais", "lieunais" },
             { "genre", "genre" },
             { "adresse", "adresse" },
-            { "numCarte", "numCarte" },
+            { "numCarte", "numcarte" },
             { "origine", "origine" }
         };
     }
