@@ -4,31 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace omen_management.Controllers
+namespace sqliteDbToJsonFile.Controllers
 {
-    class CHoliday
+    class CIndividus
     {
         Dictionary<string, string> fields { get; set; }
         public Dictionary<string, string> message;
-        public CHoliday(Dictionary<string, string> fields)
+        public CIndividus(Dictionary<string, string> fields)
         {
             this.fields = fields;
         }
-        public void add(CHoliday args)
+        public void add(CIndividus args)
         {
-            Models.MHoliday obj = new Models.MHoliday();
+            Models.MIndividus obj = new Models.MIndividus();
             obj.insert(args.fields);
             message = obj.callback;
         }
-        public void update(CHoliday args)
+        public void update(CIndividus args)
         {
-            Models.MHoliday obj = new Models.MHoliday();
+            Models.MIndividus obj = new Models.MIndividus();
             obj.update(args.fields);
             message = obj.callback;
         }
-        public void delete(CHoliday args)
+        public void delete(CIndividus args)
         {
-            Models.MHoliday obj = new Models.MHoliday();
+            Models.MIndividus obj = new Models.MIndividus();
             obj.delete(args.fields);
             message = obj.callback;
         }

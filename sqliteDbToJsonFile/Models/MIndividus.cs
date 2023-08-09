@@ -56,6 +56,53 @@ namespace sqliteDbToJsonFile.Models
                     };
             }
         }
+        public async void update(Dictionary<string, string> args)
+        {
+            try
+            {
+                if (await Apps.Query.Open())
+                {
+                    Apps.Schema schema = new Apps.Schema();
+
+                    if (await Apps.Query.updatePrepared(
+                            schema.table["tb_job"],
+                                new SQLiteParameter($"@{schema.tb_individus["id"]}", args["id"]),
+                                new SQLiteParameter($"@{schema.tb_individus["nom"]}", args["nom"]),
+                                new SQLiteParameter($"@{schema.tb_individus["postnom"]}", args["postnom"]),
+                                new SQLiteParameter($"@{schema.tb_individus["dteNais"]}", args["dteNais"]),
+                                new SQLiteParameter($"@{schema.tb_individus["lieuNais"]}", args["lieuNais"]),
+                                new SQLiteParameter($"@{schema.tb_individus["genre"]}", args["genre"]),
+                                new SQLiteParameter($"@{schema.tb_individus["adresse"]}", args["adresse"]),
+                                new SQLiteParameter($"@{schema.tb_individus["numCarte"]}", args["numCarte"]),
+                                new SQLiteParameter($"@{schema.tb_individus["origine"]}", args["origine"])
+                            ))
+                    {
+                        callback = new Dictionary<string, string> {
+                            { "type", "success" }, { "message", "Information modifier" }
+                        };
+                    }
+                    else
+                    {
+                        callback = new Dictionary<string, string> {
+                            { "type", "failure" }, { "message", "Modification echouer" }
+                        };
+                    }
+                }
+                else
+                {
+                    callback = new Dictionary<string, string> {
+                        { "type", "connection" }, { "message", "Impossible d'acceder à la base de données; vérifier votre connexion" }
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                callback = new Dictionary<string, string> {
+                        { "type", "failure" }, { "message", "Modification echouer " + ex.Message}
+                    };
+            }
+
+        }
         public async void delete(Dictionary<string, string> args)
         {
             try
