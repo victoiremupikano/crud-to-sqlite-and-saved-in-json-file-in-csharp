@@ -12,6 +12,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+using System.IO;
+using sqliteDbToJsonFile.Models;
 
 namespace sqliteDbToJsonFile.Views
 {
@@ -205,7 +207,7 @@ namespace sqliteDbToJsonFile.Views
             //creation de la db sqlite
             Apps.integratedDB sqliteq = new Apps.integratedDB();
             sqliteq.create_db();
-            loard();
+            //loard();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -282,11 +284,39 @@ namespace sqliteDbToJsonFile.Views
                 msg.getAttention("Le fichier Json n'exuste pas !");
             }
         }
+        private void selecttotoreadonjson()
+        {
+            Services.MsgFRM msg = new Services.MsgFRM();
+            string fileName = @"D:\HDDH2\Mes cours UNILUK\Master\M2 MSI\ENTREPOT ET FORAGE DES DONNES\TD\code\sqliteDbToJsonFile\individus.json";
+            if (System.IO.File.Exists(fileName) != false)
+            {
+                string results = File.ReadAllText(fileName);
+                MJIndividus res = Newtonsoft.Json.JsonConvert.DeserializeObject<MJIndividus>(results);
+
+                //on vide la dgv
+                dgvData.Rows.Clear();
+                foreach (var item in res.individus)
+                {
+                    dgvData.Rows.Add(item.matricule, item.nom, item.postnom, item.datenais, item.lieunais, item.genre, item.adresse, item.numcarte, item.origine);
+                }
+            }
+            else
+            {
+                System.IO.File.Delete(fileName);
+                msg.getAttention("Le fichier Json n'exuste pas !");
+            }            
+        }
+
         #endregion
 
         private void btnSaveToJSON_Click(object sender, EventArgs e)
         {
             selecttosavetojson();
+        }
+
+        private void btnLoardOnTheJson_Click(object sender, EventArgs e)
+        {
+            selecttotoreadonjson();
         }
     }
 }

@@ -64,6 +64,7 @@
             this.btnLoard = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnLoardOnTheJson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -400,11 +401,23 @@
             this.txtId.Size = new System.Drawing.Size(298, 20);
             this.txtId.TabIndex = 6;
             // 
+            // btnLoardOnTheJson
+            // 
+            this.btnLoardOnTheJson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLoardOnTheJson.Location = new System.Drawing.Point(595, 350);
+            this.btnLoardOnTheJson.Name = "btnLoardOnTheJson";
+            this.btnLoardOnTheJson.Size = new System.Drawing.Size(169, 23);
+            this.btnLoardOnTheJson.TabIndex = 28;
+            this.btnLoardOnTheJson.Text = "Lire dans le fichier JSON";
+            this.btnLoardOnTheJson.UseVisualStyleBackColor = true;
+            this.btnLoardOnTheJson.Click += new System.EventHandler(this.btnLoardOnTheJson_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 401);
+            this.Controls.Add(this.btnLoardOnTheJson);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnSaveToJSON);
@@ -481,6 +494,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button btnLoardOnTheJson;
     }
 }
 
