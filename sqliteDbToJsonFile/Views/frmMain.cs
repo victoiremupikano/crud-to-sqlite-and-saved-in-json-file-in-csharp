@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 
 namespace sqliteDbToJsonFile.Views
 {
@@ -198,6 +202,9 @@ namespace sqliteDbToJsonFile.Views
         #endregion
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //creation de la db sqlite
+            Apps.integratedDB sqliteq = new Apps.integratedDB();
+            sqliteq.create_db();
             loard();
         }
 
@@ -225,12 +232,6 @@ namespace sqliteDbToJsonFile.Views
             loard();
         }
 
-        private void baseDeDonnéeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmSettingsDb frm = new frmSettingsDb();
-            frm.ShowDialog();
-        }
-
         private void btnSaved_Click(object sender, EventArgs e)
         {
             save();
@@ -244,6 +245,42 @@ namespace sqliteDbToJsonFile.Views
         private void dgvData_SelectionChanged(object sender, EventArgs e)
         {
             migrate();
+        }
+
+        #region json
+        private void selecttosavetojson()
+        {
+            var obj = new Models.MJIndividus();
+            foreach (DataGridViewRow dr in dgvData.Rows)
+            {
+                obj.matricule = dr.Cells[0].Value.ToString();
+                obj.nom = dr.Cells[1].Value.ToString();
+                obj.postnom = dr.Cells[2].Value.ToString();
+                obj.datenais = dr.Cells[3].Value.ToString();
+                obj.lieunais = dr.Cells[4].Value.ToString();
+                obj.genre = dr.Cells[5].Value.ToString();
+                obj.adresse = dr.Cells[6].Value.ToString();
+                obj.numcarte = dr.Cells[7].Value.ToString();
+                obj.origine = dr.Cells[8].Value.ToString();
+
+                // apres on cree obj pour json
+                var jsonFormattedContent = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+                string fileName = @"D:\HDDH2\Mes cours UNILUK\Master\M2 MSI\ENTREPOT ET FORAGE DES DONNES\TD\code\sqliteDbToJsonFile\individus.json";
+                if (System.IO.File.Exists(fileName) == false)
+                {
+                    System.IO.File.WriteAllText(fileName, jsonFormattedContent);
+                }
+                else
+                {
+                    System.IO.File.Delete(fileName);
+                }
+            }
+        }
+        #endregion
+
+        private void btnSaveToJSON_Click(object sender, EventArgs e)
+        {
+            selecttosavetojson();
         }
     }
 }

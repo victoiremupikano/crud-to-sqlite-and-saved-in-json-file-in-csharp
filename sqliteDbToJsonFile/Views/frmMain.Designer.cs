@@ -45,17 +45,6 @@
             this.dteNaiss = new System.Windows.Forms.DateTimePicker();
             this.cboGenre = new System.Windows.Forms.ComboBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.baseDeDonnéeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnSaved = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnToModify = new System.Windows.Forms.Button();
-            this.btnSaveToJSON = new System.Windows.Forms.Button();
-            this.btnLoard = new System.Windows.Forms.Button();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +54,16 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnSaved = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnToModify = new System.Windows.Forms.Button();
+            this.btnSaveToJSON = new System.Windows.Forms.Button();
+            this.btnLoard = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -247,10 +246,63 @@
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.SelectionChanged += new System.EventHandler(this.dgvData_SelectionChanged);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Matricule";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nom";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Postnom";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Né le";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Né au";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Genre";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Adresse";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "N° carte";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Origine";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.baseDeDonnéeToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -258,12 +310,11 @@
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStripMain";
             // 
-            // baseDeDonnéeToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.baseDeDonnéeToolStripMenuItem.Name = "baseDeDonnéeToolStripMenuItem";
-            this.baseDeDonnéeToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.baseDeDonnéeToolStripMenuItem.Text = "Base de donnée";
-            this.baseDeDonnéeToolStripMenuItem.Click += new System.EventHandler(this.baseDeDonnéeToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+            this.toolStripMenuItem1.Text = "?";
             // 
             // btnNew
             // 
@@ -318,6 +369,7 @@
             this.btnSaveToJSON.TabIndex = 14;
             this.btnSaveToJSON.Text = "Enregistrer dans le fichier JSON";
             this.btnSaveToJSON.UseVisualStyleBackColor = true;
+            this.btnSaveToJSON.Click += new System.EventHandler(this.btnSaveToJSON_Click);
             // 
             // btnLoard
             // 
@@ -329,12 +381,6 @@
             this.btnLoard.Text = "Charger";
             this.btnLoard.UseVisualStyleBackColor = true;
             this.btnLoard.Click += new System.EventHandler(this.btnLoard_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-            this.toolStripMenuItem1.Text = "?";
             // 
             // lblId
             // 
@@ -353,60 +399,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(298, 20);
             this.txtId.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Matricule";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nom";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Postnom";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Né le";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Né au";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Genre";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Adresse";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "N° carte";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Origine";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
             // 
             // frmMain
             // 
@@ -471,7 +463,6 @@
         private System.Windows.Forms.ComboBox cboGenre;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem baseDeDonnéeToolStripMenuItem;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSaved;
         private System.Windows.Forms.Button btnDelete;

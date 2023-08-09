@@ -149,7 +149,7 @@ namespace sqliteDbToJsonFile.Models
                 if (await Apps.Query.Open())
                 {
                     Apps.Schema schema = new Apps.Schema();
-                    Apps.Query.getData($"select * from individus order by matricule DESC;");
+                    Apps.Query.getData($"select * from {schema.table["tb_individus"]} order by {schema.tb_individus["id"]} DESC;");
                     callback = new Dictionary<string, string> {
                         { "type", "success" }, { "message", "Collecte des données sans soucies" }
                     };
@@ -164,7 +164,7 @@ namespace sqliteDbToJsonFile.Models
             catch (Exception ex)
             {
                 callback = new Dictionary<string, string> {
-                        { "type", "failure" }, { "message", "Chargement echouer " + ex.Message}
+                        { "type", "failure" }, { "message", "Chargement echouer " + ex.ToString()}
                     };
             }
         }
