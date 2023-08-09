@@ -48,12 +48,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.baseDeDonnéeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNew = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnSaved = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnToModify = new System.Windows.Forms.Button();
             this.btnSaveToJSON = new System.Windows.Forms.Button();
             this.btnLoard = new System.Windows.Forms.Button();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +64,7 @@
             // 
             this.txtNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNom.Location = new System.Drawing.Point(120, 43);
+            this.txtNom.Location = new System.Drawing.Point(120, 59);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(298, 20);
             this.txtNom.TabIndex = 0;
@@ -70,7 +72,7 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(12, 47);
+            this.lblNom.Location = new System.Drawing.Point(12, 63);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(35, 13);
             this.lblNom.TabIndex = 1;
@@ -79,7 +81,7 @@
             // lblPostNom
             // 
             this.lblPostNom.AutoSize = true;
-            this.lblPostNom.Location = new System.Drawing.Point(12, 73);
+            this.lblPostNom.Location = new System.Drawing.Point(12, 89);
             this.lblPostNom.Name = "lblPostNom";
             this.lblPostNom.Size = new System.Drawing.Size(54, 13);
             this.lblPostNom.TabIndex = 3;
@@ -89,7 +91,7 @@
             // 
             this.txtPostNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPostNom.Location = new System.Drawing.Point(120, 69);
+            this.txtPostNom.Location = new System.Drawing.Point(120, 85);
             this.txtPostNom.Name = "txtPostNom";
             this.txtPostNom.Size = new System.Drawing.Size(298, 20);
             this.txtPostNom.TabIndex = 2;
@@ -97,7 +99,7 @@
             // lblLieuNaiss
             // 
             this.lblLieuNaiss.AutoSize = true;
-            this.lblLieuNaiss.Location = new System.Drawing.Point(12, 125);
+            this.lblLieuNaiss.Location = new System.Drawing.Point(12, 141);
             this.lblLieuNaiss.Name = "lblLieuNaiss";
             this.lblLieuNaiss.Size = new System.Drawing.Size(99, 13);
             this.lblLieuNaiss.TabIndex = 7;
@@ -107,7 +109,7 @@
             // 
             this.txtLieuNais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLieuNais.Location = new System.Drawing.Point(120, 121);
+            this.txtLieuNais.Location = new System.Drawing.Point(120, 137);
             this.txtLieuNais.Name = "txtLieuNais";
             this.txtLieuNais.Size = new System.Drawing.Size(298, 20);
             this.txtLieuNais.TabIndex = 6;
@@ -115,7 +117,7 @@
             // lblDteNaiss
             // 
             this.lblDteNaiss.AutoSize = true;
-            this.lblDteNaiss.Location = new System.Drawing.Point(12, 99);
+            this.lblDteNaiss.Location = new System.Drawing.Point(12, 115);
             this.lblDteNaiss.Name = "lblDteNaiss";
             this.lblDteNaiss.Size = new System.Drawing.Size(102, 13);
             this.lblDteNaiss.TabIndex = 5;
@@ -125,7 +127,7 @@
             // 
             this.lblOrigine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOrigine.AutoSize = true;
-            this.lblOrigine.Location = new System.Drawing.Point(424, 124);
+            this.lblOrigine.Location = new System.Drawing.Point(424, 115);
             this.lblOrigine.Name = "lblOrigine";
             this.lblOrigine.Size = new System.Drawing.Size(46, 13);
             this.lblOrigine.TabIndex = 15;
@@ -134,7 +136,7 @@
             // txtOrigine
             // 
             this.txtOrigine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOrigine.Location = new System.Drawing.Point(527, 121);
+            this.txtOrigine.Location = new System.Drawing.Point(527, 112);
             this.txtOrigine.Name = "txtOrigine";
             this.txtOrigine.Size = new System.Drawing.Size(352, 20);
             this.txtOrigine.TabIndex = 14;
@@ -143,7 +145,7 @@
             // 
             this.lblNumCarte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumCarte.AutoSize = true;
-            this.lblNumCarte.Location = new System.Drawing.Point(424, 98);
+            this.lblNumCarte.Location = new System.Drawing.Point(424, 89);
             this.lblNumCarte.Name = "lblNumCarte";
             this.lblNumCarte.Size = new System.Drawing.Size(97, 13);
             this.lblNumCarte.TabIndex = 13;
@@ -152,7 +154,7 @@
             // txtNumCarte
             // 
             this.txtNumCarte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumCarte.Location = new System.Drawing.Point(527, 95);
+            this.txtNumCarte.Location = new System.Drawing.Point(527, 86);
             this.txtNumCarte.Name = "txtNumCarte";
             this.txtNumCarte.Size = new System.Drawing.Size(352, 20);
             this.txtNumCarte.TabIndex = 12;
@@ -161,7 +163,7 @@
             // 
             this.lblAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdresse.AutoSize = true;
-            this.lblAdresse.Location = new System.Drawing.Point(424, 72);
+            this.lblAdresse.Location = new System.Drawing.Point(424, 63);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(51, 13);
             this.lblAdresse.TabIndex = 11;
@@ -170,7 +172,7 @@
             // txtAdresse
             // 
             this.txtAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdresse.Location = new System.Drawing.Point(527, 69);
+            this.txtAdresse.Location = new System.Drawing.Point(527, 60);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(352, 20);
             this.txtAdresse.TabIndex = 10;
@@ -179,7 +181,7 @@
             // 
             this.lblGenre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(424, 46);
+            this.lblGenre.Location = new System.Drawing.Point(424, 37);
             this.lblGenre.Name = "lblGenre";
             this.lblGenre.Size = new System.Drawing.Size(42, 13);
             this.lblGenre.TabIndex = 9;
@@ -189,7 +191,7 @@
             // 
             this.dteNaiss.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dteNaiss.Location = new System.Drawing.Point(120, 96);
+            this.dteNaiss.Location = new System.Drawing.Point(120, 112);
             this.dteNaiss.Name = "dteNaiss";
             this.dteNaiss.Size = new System.Drawing.Size(298, 20);
             this.dteNaiss.TabIndex = 16;
@@ -202,7 +204,7 @@
             "Masculin",
             "Féminin",
             "Autres"});
-            this.cboGenre.Location = new System.Drawing.Point(527, 41);
+            this.cboGenre.Location = new System.Drawing.Point(527, 32);
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(352, 21);
             this.cboGenre.TabIndex = 17;
@@ -215,10 +217,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(15, 153);
+            this.dgvData.Location = new System.Drawing.Point(15, 187);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
-            this.dgvData.Size = new System.Drawing.Size(864, 191);
+            this.dgvData.Size = new System.Drawing.Size(864, 157);
             this.dgvData.TabIndex = 18;
             // 
             // menuStrip1
@@ -247,16 +249,17 @@
             this.btnNew.TabIndex = 20;
             this.btnNew.Text = "Nouveau";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // btnSave
+            // btnSaved
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Location = new System.Drawing.Point(96, 350);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 21;
-            this.btnSave.Text = "Enregistrer";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSaved.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSaved.Location = new System.Drawing.Point(96, 350);
+            this.btnSaved.Name = "btnSaved";
+            this.btnSaved.Size = new System.Drawing.Size(75, 23);
+            this.btnSaved.TabIndex = 21;
+            this.btnSaved.Text = "Enregistrer";
+            this.btnSaved.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -267,6 +270,7 @@
             this.btnDelete.TabIndex = 23;
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnToModify
             // 
@@ -277,6 +281,7 @@
             this.btnToModify.TabIndex = 22;
             this.btnToModify.Text = "Modifier";
             this.btnToModify.UseVisualStyleBackColor = true;
+            this.btnToModify.Click += new System.EventHandler(this.btnToModify_Click);
             // 
             // btnSaveToJSON
             // 
@@ -297,6 +302,7 @@
             this.btnLoard.TabIndex = 24;
             this.btnLoard.Text = "Charger";
             this.btnLoard.UseVisualStyleBackColor = true;
+            this.btnLoard.Click += new System.EventHandler(this.btnLoard_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -304,16 +310,36 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(12, 37);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(22, 13);
+            this.lblId.TabIndex = 27;
+            this.lblId.Text = "Id :";
+            // 
+            // txtId
+            // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtId.Location = new System.Drawing.Point(120, 33);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(298, 20);
+            this.txtId.TabIndex = 26;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 401);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnSaveToJSON);
             this.Controls.Add(this.btnLoard);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnToModify);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSaved);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.cboGenre);
@@ -336,6 +362,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "CENI (Recessement)";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -366,12 +393,14 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem baseDeDonnéeToolStripMenuItem;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnSaved;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnToModify;
         private System.Windows.Forms.Button btnSaveToJSON;
         private System.Windows.Forms.Button btnLoard;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
 
