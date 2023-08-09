@@ -1,14 +1,13 @@
-﻿using Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Telerik.WinControls.UI;
 
-namespace omen_management.Services
+
+namespace sqliteDbToJsonFile.Services
 {
     class DtgvServices
     {
@@ -17,7 +16,7 @@ namespace omen_management.Services
         public Int64 nbr_ligne { set; get; }
         private bool result = false;
 
-        public bool DGV_only_rows_has_true(KryptonDataGridView dgv, int cell)
+        public bool DGV_only_rows_has_true(DataGridView dgv, int cell)
         {
             //entier comptant le nombre des true values
             int i = 0;
@@ -37,7 +36,7 @@ namespace omen_management.Services
             return result;
         }
 
-        public double DGV_total(KryptonDataGridView dgv, int cell)
+        public double DGV_total(DataGridView dgv, int cell)
         {
             // on vide les var receptif
             tot_colonne = 0;
@@ -50,7 +49,7 @@ namespace omen_management.Services
             tot_colonne = sum;
             return tot_colonne;
         }
-        public Int64 DGV_number_line(KryptonDataGridView dgv)
+        public Int64 DGV_number_line(DataGridView dgv)
         {
             //on vide les var
             nbr_ligne = 0;
@@ -59,7 +58,7 @@ namespace omen_management.Services
             nbr_ligne = Nbr;
             return nbr_ligne;
         }
-        public Int64 RADDGV_number_line(RadGridView dgv)
+        public Int64 RADDGV_number_line(DataGridView dgv)
         {
             //on vide les var
             nbr_ligne = 0;
@@ -71,7 +70,7 @@ namespace omen_management.Services
 
         DataTable dt = new DataTable(); // pour les categories
 
-        public KryptonDataGridView delete(KryptonDataGridView dgv)
+        public DataGridView delete(DataGridView dgv)
         {
             dt.Clear();
             //on la charge
@@ -79,14 +78,14 @@ namespace omen_management.Services
             return dgv;
         }
 
-        public KryptonDataGridView empty(KryptonDataGridView dgv)
+        public DataGridView empty(DataGridView dgv)
         {
             dgv.Rows.Clear();
             return dgv;
         }
 
         //fonction pour enlever une ligne dans un dgv
-        public KryptonDataGridView cutRow(KryptonDataGridView dgv)
+        public DataGridView cutRow(DataGridView dgv)
         {
             if (dgv.Rows.Count > 0)
             {
@@ -107,7 +106,7 @@ namespace omen_management.Services
         }
 
         //fonction pour enlever une ligne dans un dgv
-        public RadGridView cutRowRad(RadGridView dgv)
+        public DataGridView cutRowRad(DataGridView dgv)
         {
             if (dgv.Rows.Count > 0)
             {

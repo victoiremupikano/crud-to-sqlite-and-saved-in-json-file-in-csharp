@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace omen_management.Services
+namespace sqliteDbToJsonFile.Services
 {
     class ImgServices
     {

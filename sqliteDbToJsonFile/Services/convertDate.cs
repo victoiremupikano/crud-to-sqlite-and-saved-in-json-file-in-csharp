@@ -1,15 +1,15 @@
-﻿using Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace omen_management.Services
+namespace sqliteDbToJsonFile.Services
 {
     class convertDate
     {
-        public string mysqlDatetimeFormat(KryptonDateTimePicker dte)
+        public string mysqlDatetimeFormat(DateTimePicker dte)
         {
             string result = string.Empty;
             if (dte.Value.Month <= 9)
@@ -37,7 +37,7 @@ namespace omen_management.Services
             return result;
         }
 
-        public string mysqlDateFormat(KryptonDateTimePicker dte)
+        public string mysqlDateFormat(DateTimePicker dte)
         {
             string result = string.Empty;
             if (dte.Value.Month <= 9)

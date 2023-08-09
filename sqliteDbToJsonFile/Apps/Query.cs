@@ -1,4 +1,4 @@
-﻿using omen_management.Properties;
+﻿using sqliteDbToJsonFile.Properties;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace omen_management.Apps
+namespace sqliteDbToJsonFile.Apps
 {
     class Query
     {

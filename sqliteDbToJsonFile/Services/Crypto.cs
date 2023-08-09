@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace omen_management.Services
+namespace sqliteDbToJsonFile.Services
 {
     class Crypto
     {

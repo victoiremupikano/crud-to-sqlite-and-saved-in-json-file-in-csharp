@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace omen_management.Services
+namespace sqliteDbToJsonFile.Services
 {
     internal class Os
     {
