@@ -15,7 +15,7 @@ namespace sqliteDbToJsonFile.Apps
         /// <summary>
         /// les champs des differentes tables
         /// </summary>
-        public Dictionary<string, string> tb_entreprise = new Dictionary<string, string> {
+        public Dictionary<string, string> tb_individus = new Dictionary<string, string> {
             { "id", "id" },
             { "nom", "nom" },
             { "postnom", "postnom" },
