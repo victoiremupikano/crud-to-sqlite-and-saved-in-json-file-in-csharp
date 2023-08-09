@@ -65,7 +65,7 @@ namespace sqliteDbToJsonFile.Models
                     Apps.Schema schema = new Apps.Schema();
 
                     if (await Apps.Query.updatePrepared(
-                            schema.table["tb_job"],
+                            schema.table["tb_individus"],
                                 new SQLiteParameter($"@{schema.tb_individus["id"]}", args["id"]),
                                 new SQLiteParameter($"@{schema.tb_individus["nom"]}", args["nom"]),
                                 new SQLiteParameter($"@{schema.tb_individus["postnom"]}", args["postnom"]),
@@ -149,7 +149,7 @@ namespace sqliteDbToJsonFile.Models
                 if (await Apps.Query.Open())
                 {
                     Apps.Schema schema = new Apps.Schema();
-                    Apps.Query.getData($"select * from individus order by id DESC;");
+                    Apps.Query.getData($"select * from individus order by matricule DESC;");
                     callback = new Dictionary<string, string> {
                         { "type", "success" }, { "message", "Collecte des données sans soucies" }
                     };

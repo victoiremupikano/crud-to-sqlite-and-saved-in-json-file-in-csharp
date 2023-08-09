@@ -113,7 +113,7 @@ namespace sqliteDbToJsonFile.Views
                 while (dr.Read())
                 {
                     //on separe les data
-                    dgvData.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
+                    dgvData.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
                 }
                 Apps.Query.DR.Close();
             }
@@ -212,7 +212,7 @@ namespace sqliteDbToJsonFile.Views
 
         private void btnToModify_Click(object sender, EventArgs e)
         {
-            save();
+            modify();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -229,6 +229,21 @@ namespace sqliteDbToJsonFile.Views
         {
             frmSettingsDb frm = new frmSettingsDb();
             frm.ShowDialog();
+        }
+
+        private void btnSaved_Click(object sender, EventArgs e)
+        {
+            save();
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            migrate();
+        }
+
+        private void dgvData_SelectionChanged(object sender, EventArgs e)
+        {
+            migrate();
         }
     }
 }

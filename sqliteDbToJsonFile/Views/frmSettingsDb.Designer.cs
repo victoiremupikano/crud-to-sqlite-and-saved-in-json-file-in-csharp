@@ -83,6 +83,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSettingsDb";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Base de donnée";
             this.Load += new System.EventHandler(this.frmSettingsDb_Load);
             this.ResumeLayout(false);

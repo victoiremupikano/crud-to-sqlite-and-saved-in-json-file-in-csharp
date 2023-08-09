@@ -76,7 +76,7 @@
             this.txtNom.Location = new System.Drawing.Point(120, 59);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(298, 20);
-            this.txtNom.TabIndex = 0;
+            this.txtNom.TabIndex = 1;
             // 
             // lblNom
             // 
@@ -121,7 +121,7 @@
             this.txtLieuNais.Location = new System.Drawing.Point(120, 137);
             this.txtLieuNais.Name = "txtLieuNais";
             this.txtLieuNais.Size = new System.Drawing.Size(298, 20);
-            this.txtLieuNais.TabIndex = 6;
+            this.txtLieuNais.TabIndex = 4;
             // 
             // lblDteNaiss
             // 
@@ -148,7 +148,7 @@
             this.txtOrigine.Location = new System.Drawing.Point(527, 112);
             this.txtOrigine.Name = "txtOrigine";
             this.txtOrigine.Size = new System.Drawing.Size(352, 20);
-            this.txtOrigine.TabIndex = 14;
+            this.txtOrigine.TabIndex = 8;
             // 
             // lblNumCarte
             // 
@@ -166,7 +166,7 @@
             this.txtNumCarte.Location = new System.Drawing.Point(527, 86);
             this.txtNumCarte.Name = "txtNumCarte";
             this.txtNumCarte.Size = new System.Drawing.Size(352, 20);
-            this.txtNumCarte.TabIndex = 12;
+            this.txtNumCarte.TabIndex = 7;
             // 
             // lblAdresse
             // 
@@ -184,7 +184,7 @@
             this.txtAdresse.Location = new System.Drawing.Point(527, 60);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(352, 20);
-            this.txtAdresse.TabIndex = 10;
+            this.txtAdresse.TabIndex = 6;
             // 
             // lblGenre
             // 
@@ -203,7 +203,7 @@
             this.dteNaiss.Location = new System.Drawing.Point(120, 112);
             this.dteNaiss.Name = "dteNaiss";
             this.dteNaiss.Size = new System.Drawing.Size(298, 20);
-            this.dteNaiss.TabIndex = 16;
+            this.dteNaiss.TabIndex = 3;
             // 
             // cboGenre
             // 
@@ -217,7 +217,7 @@
             this.cboGenre.Location = new System.Drawing.Point(527, 32);
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(352, 21);
-            this.cboGenre.TabIndex = 17;
+            this.cboGenre.TabIndex = 5;
             // 
             // dgvData
             // 
@@ -241,8 +241,11 @@
             this.dgvData.Location = new System.Drawing.Point(15, 187);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(864, 157);
             this.dgvData.TabIndex = 18;
+            this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
+            this.dgvData.SelectionChanged += new System.EventHandler(this.dgvData_SelectionChanged);
             // 
             // menuStrip1
             // 
@@ -268,7 +271,7 @@
             this.btnNew.Location = new System.Drawing.Point(15, 350);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 20;
+            this.btnNew.TabIndex = 9;
             this.btnNew.Text = "Nouveau";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -279,9 +282,10 @@
             this.btnSaved.Location = new System.Drawing.Point(96, 350);
             this.btnSaved.Name = "btnSaved";
             this.btnSaved.Size = new System.Drawing.Size(75, 23);
-            this.btnSaved.TabIndex = 21;
+            this.btnSaved.TabIndex = 10;
             this.btnSaved.Text = "Enregistrer";
             this.btnSaved.UseVisualStyleBackColor = true;
+            this.btnSaved.Click += new System.EventHandler(this.btnSaved_Click);
             // 
             // btnDelete
             // 
@@ -289,7 +293,7 @@
             this.btnDelete.Location = new System.Drawing.Point(258, 350);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 23;
+            this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -300,7 +304,7 @@
             this.btnToModify.Location = new System.Drawing.Point(177, 350);
             this.btnToModify.Name = "btnToModify";
             this.btnToModify.Size = new System.Drawing.Size(75, 23);
-            this.btnToModify.TabIndex = 22;
+            this.btnToModify.TabIndex = 11;
             this.btnToModify.Text = "Modifier";
             this.btnToModify.UseVisualStyleBackColor = true;
             this.btnToModify.Click += new System.EventHandler(this.btnToModify_Click);
@@ -311,7 +315,7 @@
             this.btnSaveToJSON.Location = new System.Drawing.Point(420, 350);
             this.btnSaveToJSON.Name = "btnSaveToJSON";
             this.btnSaveToJSON.Size = new System.Drawing.Size(169, 23);
-            this.btnSaveToJSON.TabIndex = 25;
+            this.btnSaveToJSON.TabIndex = 14;
             this.btnSaveToJSON.Text = "Enregistrer dans le fichier JSON";
             this.btnSaveToJSON.UseVisualStyleBackColor = true;
             // 
@@ -321,7 +325,7 @@
             this.btnLoard.Location = new System.Drawing.Point(339, 350);
             this.btnLoard.Name = "btnLoard";
             this.btnLoard.Size = new System.Drawing.Size(75, 23);
-            this.btnLoard.TabIndex = 24;
+            this.btnLoard.TabIndex = 13;
             this.btnLoard.Text = "Charger";
             this.btnLoard.UseVisualStyleBackColor = true;
             this.btnLoard.Click += new System.EventHandler(this.btnLoard_Click);
@@ -348,7 +352,7 @@
             this.txtId.Location = new System.Drawing.Point(120, 33);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(298, 20);
-            this.txtId.TabIndex = 26;
+            this.txtId.TabIndex = 0;
             // 
             // Column1
             // 
