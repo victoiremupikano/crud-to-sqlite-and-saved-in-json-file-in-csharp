@@ -1,0 +1,26 @@
+{
+    "individus": [
+        {
+            "matricule": "2",
+            "nom": "KAMBALE",
+            "postnom": "MBENGE",
+            "datenais": "8/9/2023 5:39:36 AM",
+            "lieunais": "BENI",
+            "genre": "Masculin",
+            "adresse": "BUNIA",
+            "numcarte": "002",
+            "origine": "BENI"
+        },
+        {
+            "matricule": "1",
+            "nom": "KASEREKA",
+            "postnom": "USHINDI",
+            "datenais": "8/9/2023 5:39:36 AM",
+            "lieunais": "MIUSIENENE",
+            "genre": "Masculin",
+            "adresse": "Butembo",
+            "numcarte": "001",
+            "origine": "GOMA"
+        }
+    ]
+}

@@ -68,12 +68,6 @@
     <Compile Include="Services\Os.cs" />
     <Compile Include="Services\Session.cs" />
     <Compile Include="Services\StringClass.cs" />
-    <Compile Include="Views\frmSettingsDb.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\frmSettingsDb.Designer.cs">
-      <DependentUpon>frmSettingsDb.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     </Compile>
     <EmbeddedResource Include="Views\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmSettingsDb.resx">
-      <DependentUpon>frmSettingsDb.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

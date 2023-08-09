@@ -8,6 +8,10 @@ namespace sqliteDbToJsonFile.Models
 {
     public class MJIndividus
     {
+        public List<Results> individus { set; get; }
+    }
+    public class Results
+    {
         public string matricule { set; get; }
         public string nom { set; get; }
         public string postnom { set; get; }

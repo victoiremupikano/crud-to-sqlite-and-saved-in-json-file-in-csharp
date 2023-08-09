@@ -250,30 +250,36 @@ namespace sqliteDbToJsonFile.Views
         #region json
         private void selecttosavetojson()
         {
+            Services.MsgFRM msg = new Services.MsgFRM();
             var obj = new Models.MJIndividus();
+            obj.individus = new List<Models.Results>();
             foreach (DataGridViewRow dr in dgvData.Rows)
             {
-                obj.matricule = dr.Cells[0].Value.ToString();
-                obj.nom = dr.Cells[1].Value.ToString();
-                obj.postnom = dr.Cells[2].Value.ToString();
-                obj.datenais = dr.Cells[3].Value.ToString();
-                obj.lieunais = dr.Cells[4].Value.ToString();
-                obj.genre = dr.Cells[5].Value.ToString();
-                obj.adresse = dr.Cells[6].Value.ToString();
-                obj.numcarte = dr.Cells[7].Value.ToString();
-                obj.origine = dr.Cells[8].Value.ToString();
+                var lt1 = new Models.Results();
+                lt1.matricule = dr.Cells[0].Value.ToString();
+                lt1.nom = dr.Cells[1].Value.ToString();
+                lt1.postnom = dr.Cells[2].Value.ToString();
+                lt1.datenais = dr.Cells[3].Value.ToString();
+                lt1.lieunais = dr.Cells[4].Value.ToString();
+                lt1.genre = dr.Cells[5].Value.ToString();
+                lt1.adresse = dr.Cells[6].Value.ToString();
+                lt1.numcarte = dr.Cells[7].Value.ToString();
+                lt1.origine = dr.Cells[8].Value.ToString();
 
-                // apres on cree obj pour json
-                var jsonFormattedContent = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
-                string fileName = @"D:\HDDH2\Mes cours UNILUK\Master\M2 MSI\ENTREPOT ET FORAGE DES DONNES\TD\code\sqliteDbToJsonFile\individus.json";
-                if (System.IO.File.Exists(fileName) == false)
-                {
-                    System.IO.File.WriteAllText(fileName, jsonFormattedContent);
-                }
-                else
-                {
-                    System.IO.File.Delete(fileName);
-                }
+                obj.individus.Add(lt1);
+            }
+            // apres on cree obj pour json
+            var jsonFormattedContent = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            string fileName = @"D:\HDDH2\Mes cours UNILUK\Master\M2 MSI\ENTREPOT ET FORAGE DES DONNES\TD\code\sqliteDbToJsonFile\individus.json";
+            if (System.IO.File.Exists(fileName) != false)
+            {
+                System.IO.File.WriteAllText(fileName, jsonFormattedContent);
+                msg.getInfo("Json enregistrer");
+            }
+            else
+            {
+                System.IO.File.Delete(fileName);
+                msg.getAttention("Le fichier Json n'exuste pas !");
             }
         }
         #endregion

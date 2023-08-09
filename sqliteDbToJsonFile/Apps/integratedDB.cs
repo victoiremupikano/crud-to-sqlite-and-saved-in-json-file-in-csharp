@@ -49,7 +49,6 @@ namespace sqliteDbToJsonFile.Apps
             }
             else
             {
-                msg.getAttention("Database cannot create");
                 return;
             }
         }
